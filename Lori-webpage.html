@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script:wght@400..700&family=Edu+NSW+ACT+Foundation:wght@400..700&family=Goldman:wght@400;700&family=Inter:wght@100..900&family=Mirza:wght@400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Protest+Riot&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&family=Sono:wght@200..800&family=Teko:wght@300..700&display=swap" rel="stylesheet">
+    <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .main-div{
+            display: flex;
+            flex-direction: column;
+            width:100%;
+            height: 100vh;
+            padding:0;
+        }
+        .header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 30px;
+            width: 100%;
+            padding: 25px;
+            background: black;
+            position: fixed;
+
+        }
+        .logo{
+            display: flex;
+            align-items: center;       
+            padding-left: 25px;
+            text-transform: capitalize;
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 28px;
+            margin: 0;
+            color: #ffffff;
+        }
+        .nav{
+            display: flex;
+            flex-direction: row;
+            gap: 32px;
+            padding-right:30px;
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 18px;
+            margin: 10px 20px 10px 10px;
+
+        }
+        a{
+            text-decoration: none;
+            color: #ffffff;
+            letter-spacing: .4px;
+        }
+        .section{
+            width: 100%;
+            height: 500px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center; 
+            gap: 20px;
+        }
+        .left-up{
+            width: 50%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 150px 0 95px 20px;
+            margin: 218px 10px 30px 0px;
+        }
+        .content{
+            font-family: Inter, sans-serif;
+            font-size: 1.3rem;
+            font-weight: 300;
+            margin: 0;
+            padding-left: 50px;
+            line-height: 32px;
+        }
+        .right-down{
+            width: 50%;
+            height: 100%;
+            display: flex;
+            align-items: flex-end;
+            flex-direction: column;
+            justify-content: flex-end;
+            margin: 0;
+            padding-top:130px ;
+            margin-top: 240px;
+            /* padding-right:20px ; */
+        }
+        .lower{
+            flex-direction: row;
+            display: flex;
+            padding: 60px 110px 0 0;
+        }
+        .box{
+            width: 50%;
+            padding: 20px 20px 0 40px;
+            font-family: Inter, sans-serif;
+            border-right: 0 50px 0 0 ;
+        }
+        .button{
+            width: 185px;
+            height: 68px;
+            border-radius: 40px;
+            font-size: 19px;
+            margin: 10px 0 0 0;
+            border: solid 3px rgb(248, 0, 207);
+            color: white;
+            background: linear-gradient(360deg, black, #443e3e);
+            box-shadow: 0 6px 10px rgb(155 159 160 / 87%);
+
+        }
+        .text{
+            padding: 0;
+            margin: 0;
+            font-size: 3.815rem;
+            font-weight: 500;
+            line-height: 1.2;
+            font-family:"Poppins", sans-serif;
+            
+        }
+        .section-2{
+            width: 100%;
+            margin-bottom: -60px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 30px;
+        }
+        .card{
+            padding-top: 100px;
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            width: 45%;
+            height:87% ;
+            margin-top: 80px;
+        }
+        .card-right{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;    
+            background-color:rgba(222, 222, 222, 0.379);
+            border-radius: 24px;
+        }
+        .main-card{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 90%;
+            margin-top: 5px;
+            height: 520px;
+        }
+        .paragraph{
+            margin: 0;
+            padding: 0;
+            color: var(--text-color--text-secondary);
+            font-size: 1.125rem;
+            font-family: Inter, sans-serif;
+            font-weight: 200;
+        }
+        .img{
+            width: 100%;
+            border-radius: 16px;
+            height: 350px;
+        }
+
+        .heading{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 0;
+            margin: 0;
+            padding-left: 80px;
+            font-family: Inter, sans-serif;
+            font-size: 1.8rem;
+            font-weight: 500;
+            margin-top: 180px;
+        }
+        .study-button{
+            width: 185px;
+            height: 40px;
+            border-radius: 40px;
+            font-size: 15px;
+            font-weight: 200;
+            margin: 10px 0 0 0;
+            border: solid 2px rgb(248, 0, 207);
+            color: rgb(0, 0, 0);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, .2);
+        }
+        .size{
+            font-size: 1.953rem;
+            font-weight: 450;
+        }
+        .section-3{
+            width: 100%;
+            margin-top: 300px;
+            /* display: flex;
+            flex-direction: column;
+            align-items: center */
+        }
+        .product-manu{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .main-heading{
+            text-align: center;
+        }
+        .product-list{
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+        }
+        .inner-box{
+            background-color:rgba(222, 222, 222, 0.379);
+            height: 220px;
+            width: 450px;
+            display: flex;
+            flex-direction: column;
+            padding: 60px 0 15px 25px;
+            align-items: flex-start;
+            border-radius: 30px;    
+            font-family: sans-serif;
+            margin: 0;
+        }
+        .upper-box{
+            padding-bottom: 40px;
+        }
+        .product-box{
+            padding: 0;
+            margin-top: 100px;
+            height: 500px;
+            width: 480px;
+        }
+        #logo{
+            font-size: 2.2rem;
+            font-weight: 500;
+            color: #e700a2;
+        }
+        #heading{
+            font-size: 3.5rem;
+            font-family: Inter, sans-serif;
+        }
+        .font{
+            font-family: Inter, sans-serif;
+            font-size: 1rem;
+        }
+        .lower-box{
+            display: flex;
+            flex-direction: row;
+        }
+        .content-4{
+            font-family: Inter, sans-serif;
+            font-size: 1.3rem;
+            font-weight: 300;
+            margin: 0;
+            padding-left: 50px;
+            line-height: 32px;
+        }
+        .reviwe-box{
+            padding: 0 60px 50px 20px;
+        }
+        .name{
+            font-family: Inter, sans-serif;
+            font-size: 1rem;
+            font-weight: 400;
+            margin: 0;  
+            padding-right:25px ;
+        }
+        .border{
+            border-right: solid 1px black;
+            height: 50px;
+        }
+        .names{
+            margin: 0;
+        }
+        .pic{
+            width: 65px;
+            border-radius: 50%;
+            height: 55px;
+        }
+        .client-pictutre{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 20px;
+        }
+        .customer-review{
+            font-family: Inter, sans-serif;
+            font-size: 3.2rem;
+            font-weight: 500;
+            color: #121212;
+        }
+        .font{
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+        }
+        .lower-button{
+            width: 190px;
+            height: 68px;
+            border-radius: 40px;
+            font-size: 19px;
+            margin: 10px 0 0 0;
+            border: solid 2px rgb(248, 0, 207);
+            color: rgb(0, 0, 0);
+            background: linear-gradient(-360deg, rgb(255, 252, 252), #ffffff);
+        }
+        .lower-content{
+           padding: 70px 20px 0 20px;
+        }
+        .section-5{
+            background-color: #242424;
+        }
+        .lower-text{
+            padding: 0;
+            margin: 0;
+            font-size: 3.815rem;
+            font-weight: 500;
+            line-height: 1.2;
+            color: rgb(255, 255, 254);
+            font-family:"Poppins", sans-serif;
+        }
+        .down-button{
+            font-family: Inter, sans-serif;
+            font-size: 1.3rem;
+            font-weight: 300;
+            margin: 0;
+            padding-top:20px ;
+            padding-left: 50px;
+            line-height: 32px;
+        }
+        .lower-about-section{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            gap: 460px;
+            padding-top: 130px;
+            padding-left: 50px;
+            padding-right: 60px;
+
+        }
+        .font-lowercase{
+            font-size: 15px;
+            font-weight: 300; 
+            color: #3e3e3e;
+            font-family:Inter, sans-serif; 
+        }
+        .font-uppercase{
+            font-size: 12px;
+            font-weight: 200; 
+            color: #a5a5a5;
+            font-family:Inter, sans-serif; 
+        }
+        /* .lower-line{
+            width: 100%;
+        }
+        .lower-line > hr{
+            width: 90%;
+            
+            
+        }
+        hr.new{
+            border-top: 0px solid rgba(0, 0, 0, 0.128);
+
+        } */
+        .fotter{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 70px;
+            padding-bottom: 50px;
+            margin-bottom: 70px;
+        }
+        .lower-content-bottom{
+            text-transform: capitalize;
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 14px;
+            margin: 0;
+            padding-right: 60px;
+            color: #ffffff;
+
+        }
+        .new{
+            margin-top: 50px;
+            width: 100%; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .new > div{
+            width: 94%;
+            border-bottom: solid 1px rgba(51, 51, 51, 0.605);
+            text-align: center;
+        }
+        /* .tasweer-img{
+            width: 340px;
+            border-radius: 150px 130px 130px 150px;
+            height: 340px;
+            box-shadow: 0 6px 10px rgba(117, 153, 163, 0.866); */
+        /* } */
+        .right-up{
+            padding-right: 25px;
+            margin-right: 200px;
+            margin-bottom: -35px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-div">
+        <div class="header">
+            <div class="logo">
+                <h3 class="logo">lori</h3>
+            </div>
+            <div class="nav">
+                <nav class="nav">
+                    <a href="#">Home</a>
+                    <a href="#">About</a>
+                    <a href="#">Contact</a>
+                </nav>
+            </div>
+        </div>
+        <div class="section">
+            
+            <div class="left-up">
+                
+               <div class="content"><h1 class="text">Helping entrepreneurs <br>find product market fit</h1></div> 
+                    <div  class="content"><p>As a senior UI/UX designer, I specialize in assisting entrepreneurs
+                         in finding the perfect product-market fit.
+                         With my expertise, I can help you create user-centric designs that drive customer 
+                         engagement and boost your business growth.</p></div> 
+                <div class="content"><button class="button">Schedule call</button></div>
+            </div>
+            <div class="right-down"><div class="right-up">
+                <div class="tasweer"></div></div>
+                <div class="lower">
+                <div class="box"><h3>Expert advice</h3>
+                    <p>Receive personalized guidance tailored to your unique business needs and target audience.</p></div>
+                <div class="box"><h3>Data-driven</h3>
+                    <p>Leverage data insights to optimize your product design and improve user satisfaction.</p></div>
+                </div>    
+            </div>
+        </div> 
+        <h1 class="heading">Featured projects</h1>
+        <div class="section-2">
+            <div class="card">
+                <div class="card-right">
+                    <div class="main-card">
+                        <div class="photo"><img class="img"src="../IMG/5.jpg" alt=""></div>
+                        <div class="paragraph">
+                            <h2 class="size">landing page for fantasy game</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <button class="study-button">View case study</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-right">
+                    <div class="main-card">
+                        <div class="photo"><img class="img"src="../IMG/3.jpg" alt=""></div>
+                        <div class="paragraph">
+                            <h2 class="size">A tool for designers</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <button class="study-button">View case study</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section-2">
+            <div class="card">
+                <div class="card-right">
+                    <div class="main-card">
+                        <div class="photo"><img class="img"src="../IMG/7.jpg" alt=""></div>
+                        <div class="paragraph">
+                            <h2 class="size">MVP for accounting app</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <button class="study-button">View case study</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-right">
+                    <div class="main-card">
+                        <div class="photo"><img class="img"src="../IMG/8.jpg" alt=""></div>
+                        <div class="paragraph">
+                            <h2 class="size">MVP for real estate management</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <button  class="study-button">View case study</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section-3">
+            <div class="product-manu">
+                <div class="main-heading">
+                    <h1 class="text">Creating a product that <br> resonates with the market</h1>
+                    <p class="paragraph">Discover the process that helps your product succeed.</p>
+                </div>
+                <div class="product-list">
+                    <div class=" product-box">
+                        <div class="inner-box">
+                            <i id="logo" class="fa fa-user-md" aria-hidden="true"></i>
+                            <h2 class="size">Understanding your target audience</h2>
+                            <p class="font">Research and analyze your target market.</p>
+                        </div>
+                    </div>
+                    <div class=" product-box">
+                        <div class="inner-box">
+                            <i  id="logo" class="fa fa-users" aria-hidden="true"></i>
+                            <h2 class="size">Creating user-centric designs</h2>
+                            <p class="font">Crafting intuitive and engaging user experiences.</p>
+                        </div>
+                    </div>
+                    <div class=" product-box">
+                        <div class="inner-box">
+                            <i id="logo" class="fa fa-refresh" aria-hidden="true"></i>
+                            <h2 class="size">Crafting intuitive and engaging user experiences.</h2>
+                            <p class="font">Refining your product through iterative design and testing.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section-4">
+            <div class="reviwe-box">
+                <div class="upper-box">
+                    <div class="content-4">
+                        <h1 class="customer-review">Customer testimonials</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+                <div class="lower-box">
+                    <div class="comment-1">
+                        <div class="comment-box">
+                            <div class="content">
+                                <p class="font"> <i>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.
+                                    Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat."</i></p>
+                                    <div class="client-pictutre">
+                                        <div class="picture"><img class="pic" src="../IMG/1.jpg" alt=""></div>
+                                        <div class="name"><p class="names"><b>Craig James</b> <br>Founder, Dens</p></div>
+                                        <div class="border"></div>
+                                        <svg id="logo-88" width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg"><path class="ccustom" fill-rule="evenodd" clip-rule="evenodd" d="M13.7146 0.516113C11.4582 0.516113 9.2943 1.41245 7.69881 3.00794L0 10.7067V14.2307C0 16.7204 1.06944 18.9603 2.77401 20.5161C1.06944 22.0719 0 24.3118 0 26.8015V30.3255L7.69881 38.0243C9.2943 39.6198 11.4582 40.5161 13.7146 40.5161C16.2043 40.5161 18.4442 39.4467 20 37.7421C21.5558 39.4467 23.7957 40.5161 26.2854 40.5161C28.5418 40.5161 30.7057 39.6198 32.3012 38.0243L40 30.3255V26.8015C40 24.3118 38.9306 22.0719 37.226 20.5161C38.9306 18.9603 40 16.7204 40 14.2307V10.7067L32.3012 3.00794C30.7057 1.41245 28.5418 0.516113 26.2854 0.516113C23.7957 0.516113 21.5558 1.58555 20 3.29012C18.4442 1.58555 16.2043 0.516113 13.7146 0.516113ZM25.7588 20.5161C25.6629 20.4286 25.5688 20.3387 25.4766 20.2465L20 14.7699L14.5234 20.2465C14.4312 20.3387 14.3371 20.4286 14.2412 20.5161C14.3371 20.6036 14.4312 20.6935 14.5234 20.7857L20 26.2623L25.4766 20.7857C25.5688 20.6935 25.6629 20.6036 25.7588 20.5161ZM22.2222 30.3255L22.2222 32.0085C22.2222 34.2525 24.0414 36.0717 26.2854 36.0717C27.363 36.0717 28.3965 35.6436 29.1585 34.8816L35.5556 28.4845V26.8015C35.5556 24.5575 33.7364 22.7383 31.4924 22.7383C30.4148 22.7383 29.3813 23.1664 28.6193 23.9284L22.2222 30.3255ZM17.7778 30.3255L11.3807 23.9284C10.6187 23.1664 9.58524 22.7383 8.50762 22.7383C6.26359 22.7383 4.44444 24.5575 4.44444 26.8015V28.4845L10.8415 34.8816C11.6035 35.6436 12.637 36.0717 13.7146 36.0717C15.9586 36.0717 17.7778 34.2525 17.7778 32.0085V30.3255ZM17.7778 9.02373V10.7067L11.3807 17.1038C10.6187 17.8658 9.58524 18.2939 8.50762 18.2939C6.26359 18.2939 4.44444 16.4747 4.44444 14.2307V12.5477L10.8415 6.15063C11.6035 5.38864 12.637 4.96056 13.7146 4.96056C15.9586 4.96056 17.7778 6.7797 17.7778 9.02373ZM28.6193 17.1038L22.2222 10.7067L22.2222 9.02373C22.2222 6.7797 24.0414 4.96056 26.2854 4.96056C27.363 4.96056 28.3965 5.38864 29.1585 6.15063L35.5556 12.5477V14.2307C35.5556 16.4747 33.7364 18.2939 31.4924 18.2939C30.4148 18.2939 29.3813 17.8658 28.6193 17.1038Z" fill="#FF630B"></path></svg>
+                                    </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" comment-2">
+                        <div class=" comment-box">
+                            <div class="content">
+                                <p class="font"> <i> "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.
+                                    Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat."</i></p>
+                                    <div class="client-pictutre">
+                                        <div class="picture"><img class="pic" src="../IMG/5.jpg" alt=""></div>
+                                        <div class="name"><p class="names"><b>Craig James</b><br>Founder, Dens</p></div>
+                                        <div class="border"></div>
+                                        <svg id="logo-89" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path class="ccustom" d="M39.9449 21.4998H32.8003C26.5594 21.4998 21.5003 26.559 21.5003 32.7998V39.9444C31.3502 39.214 39.2145 31.3497 39.9449 21.4998Z" fill="#775732"></path><path class="ccustom" d="M18.5003 39.9444V32.7998C18.5003 26.559 13.4411 21.4998 7.20026 21.4998H0.0556641C0.785998 31.3497 8.65036 39.214 18.5003 39.9444Z" fill="#775732"></path><path class="ccustom" d="M39.9449 18.4998C39.2145 8.64987 31.3502 0.78551 21.5003 0.0551758V7.19977C21.5003 13.4406 26.5594 18.4998 32.8003 18.4998H39.9449Z" fill="#775732"></path><path class="ccustom" d="M18.5003 0.0551758C8.65036 0.78551 0.785998 8.64987 0.0556641 18.4998H7.20026C13.4411 18.4998 18.5003 13.4406 18.5003 7.19977V0.0551758Z" fill="#775732"></path><path class="ccustom" d="M13.583 19.9998C16.3555 18.6145 18.615 16.355 20.0002 13.5825C21.3855 16.355 23.6449 18.6145 26.4175 19.9998C23.6449 21.385 21.3855 23.6445 20.0002 26.417C18.615 23.6445 16.3555 21.385 13.583 19.9998Z" fill="#CA9352"></path></svg>
+                                    </div>
+                              
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section-5">
+            <div class="lower-content">
+                <div class="lower-heading">
+                    <div class="content"><h1 class="lower-text">Let's schedule a call to <br> transform your business</h1></div>
+                    <div class="down-button"><button class="lower-button">Schedule call</button></div>
+                </div>
+                <div class="lower-about-section">
+                    <div class="about-section-1">
+                        <div class="font-lowercase"><h4>Pages</h4></div>
+                        <div class="font-uppercase"><h2>Home</h2></div>
+                        <div class="font-uppercase"><h2>About</h2></div>
+                        <div class="font-uppercase"><h2>Contact</h2></div>
+                    </div>
+                    <div class="about-section-2">
+                        <div class="font-lowercase"><h4>Template</h4></div>
+                        <div class="font-uppercase"><h2>Style Guide</h2></div>
+                        <div class="font-uppercase"><h2>Licenses</h2></div>
+                        <div class="font-uppercase"><h2>Changelog</h2></div>
+                    </div>
+                    <div class="about-section-3">
+                        <div class="font-lowercase"><h4>Follow me</h4></div>
+                        <div class="font-uppercase"><h2>Twitter</h2></div>
+                        <div class="font-uppercase"><h2>Linkedin</h2></div>
+                        <div class="font-uppercase"><h2>Instagram</h2></div>
+                        <div class="font-uppercase"><h2>Youtube</h2></div>
+                    </div>
+                </div>
+                <div class="new"><div></div></div>
+                <!-- <div class="lower-line"><hr class="new"></div> -->
+                <div class="fotter">
+                    <div class="logo"><h3 class="logo">lori</h3></div>
+                    <div class="lower-content-bottom">© Designed by George Barbu. Powered by Webflow.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
